@@ -1,0 +1,133 @@
+:root {
+    --primary-clr: #336699;
+    --links-clr: #82838d;
+}
+
+nav {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: height 300ms, box-shadow 300ms;
+    z-index: 9999;
+}
+
+nav h1 {
+    font-weight: 800;
+    font-size: 1.5rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+nav>div {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+nav>div .links {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+
+nav>div .links .link {
+    position: relative;
+    color: var(--links-clr);
+    text-decoration: none;
+}
+
+.ham-menu {
+    position: relative;
+    width: 25px;
+    height: 17px;
+    display: none;
+}
+
+.ham-menu span {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    position: absolute;
+    border-radius: 1em;
+    transition: 0.3s;
+}
+
+.ham-menu span:nth-of-type(1) {
+    top: 0;
+    left: 0;
+    box-shadow: 0 6.8px 0px black;
+}
+
+.ham-menu span:nth-of-type(2) {
+    bottom: 0;
+    left: 0;
+}
+
+nav.scrolled {
+    height: 60px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.079);
+}
+
+@media (min-width: 768px) {
+    nav>div .links .link:not(:last-of-type)::before {
+        content: "";
+        width: 0%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        transition: width 200ms ease;
+    }
+    nav>div .links .link:not(:last-of-type):hover::before {
+        width: 100%;
+        transition: width 400ms ease;
+    }
+    nav>div .links .link:hover {
+        color: black;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        height: 60px;
+    }
+    nav>div .links {
+        --nav-height: 60px;
+        position: absolute;
+        top: var(--nav-height);
+        left: 0;
+        background-color: #f2f2f2;
+        width: 100%;
+        height: calc(100vh - var(--nav-height));
+        transform: translateY(-100%);
+        z-index: -1;
+        transition: 0.5s ease;
+        flex-direction: column;
+        gap: 0;
+        padding: 1em;
+    }
+    nav>div .links .link {
+        width: 100%;
+        text-align: center;
+        padding-block: 1em;
+    }
+    .ham-menu {
+        display: block;
+    }
+    nav.active>div .links {
+        transform: translateY(0%);
+    }
+    nav.active .ham-menu span:nth-of-type(1) {
+        box-shadow: none;
+        transform: rotate(45deg) translateY(10px) translateX(1px);
+    }
+    nav.active .ham-menu span:nth-of-type(2) {
+        transform: rotate(-45deg) translateY(-10px) translateX(-1px);
+    }
+}

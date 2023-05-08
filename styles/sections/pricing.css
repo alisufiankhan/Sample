@@ -1,0 +1,131 @@
+#pricing {
+    margin-top: 5em;
+    padding-block: 4em;
+}
+
+#pricing h2 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#pricing .plans {
+    display: flex;
+    gap: 3em;
+    flex-wrap: wrap;
+    margin-top: 3em;
+}
+
+#pricing .plans>div {
+    flex-grow: 1;
+    flex-basis: 300px;
+    padding: 1em;
+    border-radius: 1em;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+#pricing .plans>div.popular {
+    background-color: #336699;
+    color: white;
+}
+
+#pricing .plans>div.popular p,
+#pricing .plans>div.popular .feature {
+    color: white !important;
+}
+
+#pricing .plans>div h3 {
+    font-size: 2em;
+    font-weight: 700;
+    margin-block: 1em;
+}
+
+#pricing .plans>div h4 {
+    font-size: 2em;
+    font-weight: 500;
+    margin-block: 0.5em;
+}
+
+#pricing .plans>div p {
+    font-size: 1em;
+    line-height: 1.5;
+    padding-bottom: 2em;
+    color: #3e3e3e;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#pricing .plans>div .feature {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 0.7em;
+    font-size: 1em;
+    font-weight: 500;
+    color: #3e3e3e;
+}
+
+#pricing .plans>div .feature:nth-of-type(1) {
+    margin-top: 2em;
+}
+
+#pricing .plans>div .feature:last-of-type {
+    margin-bottom: 2em;
+}
+
+#pricing .plans img {
+    width: 20px;
+}
+
+#pricing .plans>div a button {
+    font-weight: 500;
+    font-size: 1em;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+
+}
+#pricing .plans>div button {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 0.5em;
+    padding-block: 0.6em;
+    transition: 300ms ease;
+    cursor: pointer;
+    width: 98%;
+}
+
+
+#pricing .plans>div button:hover {
+    background-color: #336699;
+    color: white;
+    border: 2px solid #336699;
+}
+
+#pricing .plans>div  button.active {
+    background-color: white;
+    color: black;
+    border: 2px solid white;
+}
+
+#pricing .plans>div a button.active:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.btn1{
+    color: black;
+}
+.btn1:hover{
+    color: white;
+}
+
+.btna{
+    color: black;
+}

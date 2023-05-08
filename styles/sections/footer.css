@@ -1,0 +1,54 @@
+:root {
+    --primary-clr: #336699;
+    --links-clr: #82838d;
+}
+
+footer {
+    background-color: #3475b6;
+    margin-top: 3em;
+    padding: 2em 0;
+}
+
+footer>div {
+    width: 100%;
+    max-width: 900px;
+    padding-inline: 1em;
+    margin: auto;
+    display: flex;
+    gap: 2em;
+    justify-content: space-between;
+}
+
+footer>div img {
+    width: 200px;
+    height: 170px;
+}
+
+footer>div ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+footer>div ul .not-link {
+    margin-bottom: 1em;
+    color: white;
+    font-weight: 500;
+}
+
+footer>div ul li {
+    color: #8eb0d1;
+    cursor: pointer;
+}
+
+footer>div ul li:hover {
+    color: white;
+}
+
+@media (max-width: 768px) {
+    footer>div {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

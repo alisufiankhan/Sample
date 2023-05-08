@@ -1,0 +1,12 @@
+.tw{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.tw .content h2 {
+    font-size: clamp(1rem, 1vw, 1rem);
+}
+.tw form button a {
+    color: white;
+}

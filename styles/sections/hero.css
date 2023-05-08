@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&family=DM+Sans&family=Poppins:wght@600&display=swap');
+:root {
+    --primary-clr: #336699;
+    --links-clr: #82838d;
+}
+
+header {
+    padding-block: 10rem 9rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    align-items: center;
+    gap: 3em;
+}
+
+/* Item-1 */
+
+header .item-1 h1 {
+    font-size: clamp(2rem, 4vw, 4rem);
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+header .item-1 p {
+    font-size: clamp(1.2rem, 1vw, 1.3rem);
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+/* Item-2 */
+
+header .item-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 0.5em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.08);
+}
+
+header .item-2 .circle-1 {
+    width: 100px;
+    height: 100px;
+    background-color: var(--primary-clr);
+    opacity: 0.9;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+header .item-2 .circle-2 {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-clr);
+    opacity: 0.6;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .item-2 .circle-3 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--primary-clr);
+    opacity: 0.8;
+    border-radius: 100%;
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-block: 5rem;
+    }
+.item-1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+}

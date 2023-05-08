@@ -1,0 +1,50 @@
+#contact {
+    padding-block: 3em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+#contact>div {
+    flex-grow: 1;
+    flex-basis: 400px;
+}
+
+#contact h2 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 0.2em;
+}
+
+#contact p {
+    line-height: 1.5;
+}
+
+#contact form {
+    position: relative;
+    flex-grow: 1;
+    flex-basis: 400px;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#contact form input,
+#contact form textarea {
+    width: 100%;
+    padding: 1em;
+    border-radius: 0.5em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    outline: none;
+    transition: box-shadow 300ms ease;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    box-shadow: 5px 5px 0 336699;
+}
+
+#contact form textarea {
+    resize: vertical;
+}

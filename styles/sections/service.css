@@ -1,0 +1,92 @@
+#services {
+    position: relative;
+    padding-block: 6rem;
+    isolation: isolate;
+}
+
+#services::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #f2f2f2;
+    position: absolute;
+    inset: 0;
+    transform: skewY(-5deg);
+    z-index: -1;
+}
+
+#services h2 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+}
+
+#services .cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    margin-top: 2em;
+}
+
+#services .cards .card {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 1em;
+    background: linear-gradient(45deg, #e6e6e6, #f2f2f2, #e6e6e6);
+    border-radius: 0.6em;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.088);
+    border: 1px solid rgba(0, 0, 0, 0.088);
+    transition: 300ms ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+#services .cards .card>div {
+    background-color: red;
+    border-radius: 0.6em 0.6em 0 0;
+    overflow: hidden;
+}
+
+#services .cards .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 200ms ease;
+}
+
+#services .cards .card h3 {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+#services .cards .card p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 1em;
+}
+
+#services .cards .card button {
+    align-self: start;
+    padding: 0.5em 1.5em;
+    border: 1px solid #336699;
+    background-color: #336699;
+    color: white;
+    border-radius: 0.4em;
+    cursor: pointer;
+    margin-top: auto;
+    transition: 300ms ease;
+}
+
+#services .cards .card button:hover {
+    background-color: transparent;
+    color: black;
+}
+
+#services .cards .card:hover {
+    transform: translateY(-5px);
+}
+
+#services .cards .card:hover img {
+    scale: 1.1;
+}
